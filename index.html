@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <title>Crud Operation</title>
+    <link type="text/css" rel="stylesheet" href="style.css"
+</head>
+
+<body>
+    <h2 class="login">PLEASE LOGIN.....</h2>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" required>
+                    </div>
+                    <div>
+                        <label for="blood">Blood Group</label>
+                        <input type="text" name="blood" id="blood" pattern="(?:AB|A|B|O)[-+]"required>
+                    </div>
+                    <div>
+                         <label for="phone">Phone Number</label>
+                        <input type="int" name="phone" id="phone" required  minlength="10"
+                        maxlength="25"
+                        pattern="^(\+[0-9]{2,3}\s?)?(\([0-9]+\)\s?)?[0-9\s\-]+" />
+                    </div>
+                    <!-- <label for="myform_phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" />
+                      <div id="phone_error" class="error hidden">Please enter a valid phone number</div>
+                    </div> -->
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="date" name="date" id="date" required>
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>BloodGroup</th>
+                                <th>Phone</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
